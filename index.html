@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول شفرة مورس الذكي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="theme-switcher">
+        <button id="themeToggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+            <span>وضع الليل</span>
+        </button>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-broadcast-tower"></i> محول شفرة مورس الذكي</h1>
+            <p class="subtitle">تحويل تلقائي بين العربية وشفرة مورس</p>
+        </header>
+        
+        <div class="converter-box">
+            <div class="input-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-edit"></i> أدخل النص</h2>
+                    <button id="clearInput" class="icon-btn" title="مسح النص"><i class="fas fa-trash"></i></button>
+                </div>
+                <textarea id="inputText" placeholder="اكتب هنا... سيتم التحويل تلقائيًا"></textarea>
+                <div class="input-label" id="inputTypeLabel">كتابة عربية</div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="swapBtn" class="action-btn" title="تبديل">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+                <button id="playBtn" class="action-btn">
+                    <i class="fas fa-play"></i> تشغيل الصوت
+                </button>
+            </div>
+            
+            <div class="output-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-code"></i> النتيجة</h2>
+                    <div class="output-actions">
+                        <button id="copyBtn" class="icon-btn" title="نسخ الناتج"><i class="fas fa-copy"></i></button>
+                        <button id="clearOutput" class="icon-btn" title="مسح النص"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <textarea id="outputText" placeholder="ستظهر النتيجة هنا..." readonly></textarea>
+                <div class="output-label" id="outputTypeLabel">شفرة مورس</div>
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+        </div>
+        
+        <div class="morse-chart">
+            <h2><i class="fas fa-table"></i> جدول شفرة مورس للحروف العربية</h2>
+            <div id="chart"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
