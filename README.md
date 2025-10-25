@@ -1,2 +1,2 @@
 # morse-Code
-موقع يقوم بترجمة شفرة مورس الى العربية
+A site that translates Morse code into Arabic
